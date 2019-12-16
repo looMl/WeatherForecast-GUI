@@ -4,9 +4,9 @@ Simple GUI application which uses OpenWeatherMap's API to fetch a specified city
 
 ## Requirements
 
-This 3 libreries are *required* by the program to actually work (placed in the lib folder):
-gson-2.8.2.jar
-java-json.jar
+This 3 libreries are *required* by the program to actually work (placed in the lib folder):\
+gson-2.8.2.jar\
+java-json.jar\
 json-simple-1.1.1.jar
 
 ## How to use it
