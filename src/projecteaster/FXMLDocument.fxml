@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="1000.0" style="-fx-background-color: #334355;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projecteaster.FXMLDocumentController">
+    <children>
+      <Pane layoutX="269.0" layoutY="97.0" prefHeight="345.0" prefWidth="695.0" style="-fx-background-color: #212B36;">
+         <children>
+            <Label fx:id="textPressure" layoutX="448.0" layoutY="288.0" text="Pressure:" textFill="WHITE">
+               <font>
+                  <Font name="Open Sans" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="tempLabel" layoutX="522.0" layoutY="61.0" prefHeight="98.0" prefWidth="136.0" textFill="WHITE">
+               <font>
+                  <Font name="Open Sans" size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="tempMinLabel" layoutX="525.0" layoutY="151.0" prefHeight="50.0" prefWidth="57.0" textFill="WHITE">
+               <font>
+                  <Font name="Open Sans" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="tempMaxLabel" layoutX="622.0" layoutY="150.0" prefHeight="50.0" prefWidth="57.0" textFill="WHITE">
+               <font>
+                  <Font name="Open Sans" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="pressureLabel" layoutX="542.0" layoutY="284.0" prefHeight="37.0" prefWidth="126.0" textFill="WHITE">
+               <font>
+                  <Font name="Open Sans Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="textHumidity" layoutX="23.0" layoutY="288.0" text="Humidity:" textFill="WHITE">
+               <font>
+                  <Font name="Open Sans" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="humidityLabel" layoutX="126.0" layoutY="285.0" prefHeight="37.0" prefWidth="79.0" textFill="WHITE">
+               <font>
+                  <Font name="Open Sans Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="textWindSpeed" layoutX="213.0" layoutY="290.0" prefHeight="24.0" prefWidth="114.0" text="Wind Speed:" textFill="WHITE">
+               <font>
+                  <Font name="Open Sans" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="windSpeedLabel" layoutX="332.0" layoutY="286.0" prefHeight="37.0" prefWidth="95.0" textFill="WHITE">
+               <font>
+                  <Font name="Open Sans Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="descriptionLabel" layoutX="246.0" layoutY="154.0" prefHeight="37.0" prefWidth="200.0" textFill="WHITE">
+               <font>
+                  <Font name="Open Sans" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="cityLabel" layoutX="23.0" layoutY="27.0" prefHeight="37.0" prefWidth="200.0" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Open Sans Extrabold" size="25.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="img" cache="true" cacheHint="QUALITY" fitHeight="130.0" fitWidth="200.0" layoutX="248.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" smooth="false" />
+            <Label fx:id="textConditions" layoutX="23.0" layoutY="92.0" prefHeight="37.0" prefWidth="136.0" text="CONDITIONS" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Open Sans" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="textCurrent" layoutX="23.0" layoutY="64.0" prefHeight="37.0" prefWidth="104.0" text="CURRENT" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Open Sans" size="22.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="tempMaxImg" fitHeight="29.0" fitWidth="30.0" layoutX="590.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="tempMinImg" fitHeight="29.0" fitWidth="30.0" layoutX="492.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="textTemperature" layoutX="514.0" layoutY="45.0" prefHeight="29.0" prefWidth="136.0" text="TEMPERATURE:" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Open Sans" size="19.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Pane prefHeight="550.0" prefWidth="230.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <Button fx:id="addCityButton" layoutX="25.0" layoutY="464.0" mnemonicParsing="false" onMouseClicked="#addCityButtonAction" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #334355;" text="Add a city" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="removeButton" layoutX="25.0" layoutY="500.0" mnemonicParsing="false" onMouseClicked="#removeCityButtonAction" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #334355;" text="Remove" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font></Button>
+            <Text layoutX="37.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your locations" textAlignment="CENTER" wrappingWidth="156.72998046875">
+               <font>
+                  <Font name="Segoe UI" size="21.0" />
+               </font>
+            </Text>
+            <ListView fx:id="cityListView" layoutX="25.0" layoutY="62.0" prefHeight="382.0" prefWidth="180.0" />
+         </children>
+      </Pane>
+      <Text fill="WHITE" layoutX="502.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Today's weather!" textAlignment="CENTER" wrappingWidth="229.99998927116394">
+         <font>
+            <Font name="Segoe UI" size="28.0" />
+         </font>
+      </Text>
+      <Button fx:id="saveButton" layoutX="527.0" layoutY="485.0" mnemonicParsing="false" onMouseClicked="#serializeItems" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #FFFFFF;" text="Save">
+         <font>
+            <Font name="Segoe UI" size="13.0" />
+         </font>
+      </Button>
+      <Label fx:id="textSerialize" alignment="CENTER" layoutX="528.0" layoutY="519.0" prefHeight="17.0" prefWidth="180.0" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="14.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
